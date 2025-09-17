@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ancient Scripts Design System - Cryptographic Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:wght@400;600&display=swap');
+
+@layer base {
+  :root {
+    /* Ancient Parchment Palette */
+    --background: 30 15% 8%;
+    --foreground: 45 35% 85%;
+
+    --card: 30 25% 12%;
+    --card-foreground: 45 30% 88%;
+
+    --popover: 30 20% 10%;
+    --popover-foreground: 45 30% 88%;
+
+    /* Golden Ancient Colors */
+    --primary: 45 85% 55%;
+    --primary-foreground: 30 15% 8%;
+    --primary-glow: 45 90% 65%;
+
+    /* Parchment Secondary */
+    --secondary: 35 25% 20%;
+    --secondary-foreground: 45 30% 88%;
+
+    /* Muted Ancient Tones */
+    --muted: 30 20% 15%;
+    --muted-foreground: 45 20% 65%;
+
+    /* Accent Copper */
+    --accent: 25 60% 50%;
+    --accent-foreground: 45 30% 88%;
+
+    /* Destructive Red Clay */
+    --destructive: 10 70% 45%;
+    --destructive-foreground: 45 30% 88%;
+
+    /* Borders & Inputs */
+    --border: 35 15% 25%;
+    --input: 35 15% 18%;
+    --ring: 45 85% 55%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    /* Custom Design Tokens */
+    --gradient-ancient: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-parchment: linear-gradient(180deg, hsl(var(--card)), hsl(var(--background)));
+    --gradient-copper: linear-gradient(135deg, hsl(var(--accent)), hsl(25 50% 40%));
+    
+    /* Shadows with golden glow */
+    --shadow-ancient: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.2);
+    --shadow-cipher: 0 4px 20px hsl(var(--accent) / 0.4);
+    
+    /* Transitions */
+    --transition-ancient: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Typography */
+    --font-ancient: 'Cinzel', serif;
+    --font-manuscript: 'Crimson Text', serif;
+
+    --radius: 0.75rem;
+  }
+
+  /* Remove dark mode - single theme only */
+}
+
+/* Custom Typography Classes */
+@layer components {
+  .font-ancient {
+    font-family: var(--font-ancient);
+  }
+  
+  .font-manuscript {
+    font-family: var(--font-manuscript);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px hsl(var(--primary-glow) / 0.6);
+  }
+  
+  .cipher-pattern {
+    background-image: radial-gradient(circle at 1px 1px, hsl(var(--primary) / 0.1) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+  
+  .ancient-border {
+    border-image: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent))) 1;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
